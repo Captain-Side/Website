@@ -20,10 +20,12 @@ function App() {
       <GamePass />
       <GameTesting />
       <AboutUs />
+      <Footer />
       <Roster />
       <Service />
       <Contact />
-      <Footer />
+
+
     </>
     
 
