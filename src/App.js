@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Navbar } from './components/Navbar.tsx';
+import { Navbar } from './components/Navbar.jsx';
 import { Latest } from './components/Latest.tsx';
 import { LiveEvents } from './components/LiveEvents.tsx';
 import { GamePass } from './components/GamePass.tsx';
