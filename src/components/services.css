@@ -1,0 +1,41 @@
+.service{
+    background-color: #321448;
+    height: 180px;
+    border-radius: 10px;
+    /* padding: 50px; */
+    margin: 10px;
+}
+
+.services{
+    color: rgb(247, 190, 4);
+    font-size: 20px;
+}
+
+.our{
+    color: white;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.trust{
+    margin-left: 670px;
+
+}
+
+.the{
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.process{
+    color: rgb(247, 190, 4);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.a, .b{
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+}
