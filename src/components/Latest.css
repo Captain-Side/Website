@@ -1,11 +1,15 @@
 .slider {
-  width: 100%;
+  width: 1350px;
   max-width: 100vw;
   height: 700px;
   margin: auto;
-  position: relative;
-  overflow: hidden;
   gap: 3px;
+  position: relative;
+  overflow-x: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
 }
 
 .slider .list {
@@ -15,16 +19,19 @@
   left: 0;
   top: 0;
   display: flex;
-  transition: 1s;
-  gap: 20px;
+  transition: 2s;
+  gap: 10px;
+  transition: calc();
+ 
+  
 }
 .item{
   width: 100%;
 }
 .slider .list img {
   width: 1600px;
-  max-width: 100vw;
-  height: 100%;
+  max-width: 88vw;
+  height: 650px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -52,13 +59,13 @@
 .slider .dots {
   position: absolute;
   bottom: 10px;
-  left: 0;
+  left: 30px;
   color: #fff;
   width: 100%;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .slider .dots li {
@@ -79,4 +86,29 @@
   .slider {
     height: 400px;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .slider .list img {
+    height: 200px;
+  }
+  .slider{
+    height: 200px;
+  }
+  .slider .buttons{
+    top: 42%;
+  }
+  .slider .buttons button{
+    height: 30px;
+    width: 30px;
+  }
+  .slider .dots{
+    bottom: 0;
+  }
+  .slider .dots li{
+    height: 7px;
+    width: 7px;
+    margin: 5px;
+  }
+
 }
