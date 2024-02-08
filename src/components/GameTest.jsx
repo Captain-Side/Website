@@ -31,7 +31,7 @@ const GameTest = () => {
 
       <div className='row'>
         {visibleSlice.map((item) => (
-          <div key={item.id} className='col-12 col-md-6 col-lg-4 mb-4'>
+          <div key={item.id} className='card-view col-md-6 col-lg-4 mb-4'>
             <div className='card p-0 overflow-hidden h-100 shadow'>
               <img src={item.img} alt={`Event ${item.id}`} className='card-img-top' />
               <div className='card-body'>

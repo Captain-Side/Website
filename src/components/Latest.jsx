@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./Latest.css";
-import img1 from "../assets/latest/fortnite.jpg";
+import img1 from "../assets/latest/Anthem.jpg";
 import img2 from "../assets/latest/Bgmi.jpg";
 import img3 from "../assets/latest/Cyberpunk.jpg";
 import img4 from "../assets/latest/Valo.jpg";
@@ -16,13 +16,17 @@ const Latest = () => {
   const reloadSlider = useCallback(() => {
     const slider = document.querySelector(".slider .list");
     const item = document.querySelectorAll(".slider .list .item")[active];
-    slider.style.left = -item.offsetLeft + "px";
+    if (slider && item) {
+      slider.style.left = -item.offsetLeft + "px";
 
-    const lastActiveDot = document.querySelector(".slider .dots li.active");
-    lastActiveDot.classList.remove("active");
+      const lastActiveDot = document.querySelector(".slider .dots li.active");
+      if (lastActiveDot) {
+        lastActiveDot.classList.remove("active");
+      }
 
-    const dots = document.querySelectorAll(".slider .dots li");
-    dots[active].classList.add("active");
+      const dots = document.querySelectorAll(".slider .dots li");
+      dots[active].classList.add("active");
+    }
   }, [active]);
 
   const next = useCallback(() => {
@@ -78,8 +82,8 @@ const Latest = () => {
         {items.map((_, index) => (
           <li
             key={index}
-            className={index === active ? "active" : ""}
-            onClick={() => handleDotClick(index)}
+            className={index + 1 === active ? "active" : ""}
+            onClick={() => handleDotClick(index + 1)}
           />
         ))}
       </ul>

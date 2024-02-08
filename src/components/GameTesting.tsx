@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import gameData from './GameData';
 import './gameTest.css';
@@ -8,14 +6,14 @@ const GameTesting = () => {
   const [visibleGames, setVisibleGames] = useState(3);
 
   const loadMore = () => {
-    setVisibleGames((prevVisibleGames) => prevVisibleGames + 3);
+    setVisibleGames(prevVisibleGames => prevVisibleGames + 3);
   };
 
   const visibleGamesSlice = gameData.games.slice(0, visibleGames);
 
   return (
     <section className='py-3 container' style={{ backgroundColor: '' }}>
-      <div className='d-flex justify-content-between align-items-center'>
+      <div className='d-flex justify-content-between align-items-center view-more-container'>
         <h1 className="title">
           <span className="live">GAME</span> <span className="events">TESTING</span>
         </h1>
@@ -30,8 +28,8 @@ const GameTesting = () => {
       </div>
 
       <div className='row'>
-        {visibleGamesSlice.map((item) => (
-          <div key={item.id} className='col-12 col-md-6 col-lg-4 mb-4'>
+        {visibleGamesSlice.map(item => (
+          <div key={item.id} className='card-view col-md-6 col-lg-4 mb-4'>
             <div className='card p-0 overflow-hidden h-100 shadow'>
               <img src={item.img} alt={`Game ${item.id}`} className='card-img-top' />
               <div className='card-body'>

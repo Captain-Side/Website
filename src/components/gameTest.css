@@ -1,5 +1,5 @@
 .container {
-  max-width: 11570px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -22,7 +22,9 @@
 }
 
 .align-items-center {
+  display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .btn-dark-purple {
@@ -54,12 +56,11 @@
 
 .action-button-info {
   background-color: rgb(69, 20, 69);
-  border: 2px solid gold;
   height: 1;
-  width: 100%; /* Set the width to 100% to make it wider */
+  width: 100%; 
   display: block;
   text-align: center;
-  padding: 10px; /* Adjust padding as needed */
+  padding: 10px; 
   color: white;
   text-decoration: none;
   transition-duration: 0.4s;
@@ -129,8 +130,7 @@
 
 .action-button-watch {
   background-color: rgb(37, 5, 37);
-  border: 2px solid gold;  }
-
+}
 .action-button:hover {
   background-color: darkpurple;
 }
@@ -141,7 +141,6 @@
 
 .action-button-watch {
   background-color: rgb(69, 20, 69);
-  border: 2px solid gold;
   height: 1;
   width: 100%; /* Set the width to 100% to make it wider */
   display: block;
@@ -170,8 +169,24 @@
   background-color: rgb(65, 17, 86);
 }
 
+.card {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
 
 
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.view-more-container {
+  margin-bottom: 20px;/* Adjust the margin value as needed */
+}
 
 
 
@@ -185,3 +200,42 @@
 
 .action-button-info:hover {
   background-color: rgb(65, 17, 86); }
+
+  .view-more-container {
+    margin-bottom: 20px; /* Adjust the margin value as needed */
+  }
+  
+  .card {
+    margin-bottom: 20px; /* Adjust the margin value as needed */
+  }
+  
+@media screen and (max-width: 500px) {
+  .title{
+    font-size: 1.2rem;
+  }
+  .btn-dark-purple{
+    font-size: 12px;
+  }
+  .card-view{
+    width: 187px;
+    padding: 10px !important;
+  }
+  .card-body{
+    height: auto;
+    justify-content:flex-start;
+    padding: 0;
+  }
+  .action-button{
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+  .action-button-battle{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .card-view{
+    width: 160px;
+  }
+}
