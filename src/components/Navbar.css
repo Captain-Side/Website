@@ -1,61 +1,121 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.navbar {
-    background-color: #290844;
-    color: #ffffff; /* White font color */
-    display: flex;
-    justify-content: space-between;
-  }
-  .left-side{
-    display: flex;
-  }
-  /* Styling for the logo */
-  .logo {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+/* Navbar.css */
 
-img{
-    margin-top: 10px;
-    height: 70px;
-    width: 70px;
+/* Reset styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.logo-text{
-    margin-left: 10px;
-}  
-.right-side{
-    display: flex;
-    justify-content: space-between;
-} 
-ul{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333; /* Set background color for the navbar */
+  color: #fff; /* Set text color for the navbar */
 }
-li{
-    cursor: pointer;
-    margin-left: 20px;
-    margin-right: 20px;
+
+/* Left side styling */
+.left-side {
+  display: flex;
+  align-items: center;
 }
-button {
-    font-weight: 550;
-    font-size: medium;
-    color: #ffffff;
-    border: 2px solid gold;
-    background-color: #800080;
-    border-radius: 10px;
-    padding: 5px 15px;
-    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+
+/* Right side styling */
+.right-side {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-weight: bold;
+}
+
+/* Menu items styling */
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display menu items in a row */
+}
+
+.menu-items li {
+  margin-right: 20px;
+  cursor: pointer;
+  color: #fff; /* Change menu item color */
+}
+
+/* Search icon styling */
+.search-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Login button styling */
+.login-button {
+  background-color: #800080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+/* Menu icon styling */
+.menu-icon {
+  display: none; /* Hide menu icon by default */
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none; /* Hide dropdown menu by default */
+  position: absolute;
+  top: calc(100% + 10px); /* Position the menu below the navbar */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Show dropdown menu when active */
+.dropdown-menu.active {
+  display: block;
+}
+
+/* Show menu icon on mobile and tablet */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
   }
-  
-  button:hover {
-    cursor: pointer;
-    background-color: #9932cc;
-    border-color: #ffd700;
-    transform: scale(1.05); 
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
   }
-  
+  .menu-items.active {
+    display: flex;
+  }
+}
+
