@@ -9,7 +9,13 @@ import img5 from "../assets/latest/vaaloo.png";
 const Latest = () => {
   const [active, setActive] = useState(0);
 
-  const items = [img1, img2, img3, img4, img5];
+  const items = [
+    { src: img1, link: "https://example.com/1" },
+    { src: img2, link: "https://example.com/2" },
+    { src: img3, link: "https://example.com/3" },
+    { src: img4, link: "https://example.com/4" },
+    { src: img5, link: "https://example.com/5" }
+  ];
 
   const lengthItems = items.length - 1;
 
@@ -30,14 +36,14 @@ const Latest = () => {
   }, [active]);
 
   const next = useCallback(() => {
-    setActive((prevActive) =>
+    setActive(prevActive =>
       prevActive + 1 <= lengthItems ? prevActive + 1 : 0
     );
     reloadSlider();
   }, [lengthItems, reloadSlider]);
 
   const prev = useCallback(() => {
-    setActive((prevActive) =>
+    setActive(prevActive =>
       prevActive - 1 >= 0 ? prevActive - 1 : lengthItems
     );
     reloadSlider();
@@ -50,7 +56,7 @@ const Latest = () => {
   }, [active, next]);
 
   const handleDotClick = useCallback(
-    (key) => {
+    key => {
       setActive(key);
       reloadSlider();
     },
@@ -60,14 +66,12 @@ const Latest = () => {
   return (
     <div className="slider">
       <div className="list">
-        {items.map((src, index) => (
-          <div key={index} className="item">
-            <img
-              src={src}
-              alt=""
-              className="curved-image"
-            />
-          </div>
+        {items.map((item, index) => (
+          <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
+            <div className="item">
+              <img src={item.src} alt="" className="curved-image" />
+            </div>
+          </a>
         ))}
       </div>
       <div className="buttons">
