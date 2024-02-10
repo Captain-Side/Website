@@ -1,6 +1,6 @@
 .gamepass{
     background-color: #321448;
-    height: 480px;
+    height: 800px;
     border-radius: 10px;
     /* padding: 50px; */
     margin: 10px;
@@ -32,3 +32,57 @@
   .underline-text {
     text-decoration: underline;
   }
+
+
+  /* @media screen and (max-width: 870px){
+    .gamepass{
+        background-color: #321448;
+        height: 1100px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    
+    
+
+  }
+
+  @media screen and (max-width: 869px){
+    .gamepass{
+        background-color: #321448;
+        height: 1120px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+}
+
+  @media screen and (max-width: 900px){
+    .gamepass{
+        background-color: #321448;
+        height: 780px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+  }
+
+
+  @media screen and (max-width: 600px){
+    .gamepass{
+        background-color: #321448;
+        height: 1000px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+  } */
+
+
+  @media screen and (max-width: 2500px){
+    .gamepass{
+        background-color: #321448;
+        height: auto;
+        border-radius: 10px;
+        margin: 10px;
+    }
+}
