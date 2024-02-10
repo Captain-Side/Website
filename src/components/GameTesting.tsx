@@ -9,6 +9,10 @@ const GameTesting = () => {
     setVisibleGames(prevVisibleGames => prevVisibleGames + 3);
   };
 
+  const loadLess = () => {
+    setVisibleGames(prevVisibleGames => Math.max(prevVisibleGames - 3, 3)); // Ensure visibleGames doesn't go below 3
+  };
+
   const visibleGamesSlice = gameData.games.slice(0, visibleGames);
 
   return (
@@ -17,14 +21,24 @@ const GameTesting = () => {
         <h1 className="title">
           <span className="live">GAME</span> <span className="events">TESTING</span>
         </h1>
-        {visibleGames < gameData.games.length && (
-          <button
-            className='btn btn-dark-purple'
-            onClick={() => loadMore()}
-          >
-            View More
-          </button>
-        )}
+        <div>
+          {visibleGames < gameData.games.length && (
+            <button
+              className='btn btn-dark-purple'
+              onClick={() => loadMore()}
+            >
+              View More
+            </button>
+          )}
+          {visibleGames > 3 && (
+            <button
+              className='btn btn-dark-purple ml-2'
+              onClick={() => loadLess()}
+            >
+              View Less
+            </button>
+          )}
+        </div>
       </div>
 
       <div className='row'>
