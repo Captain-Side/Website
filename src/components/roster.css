@@ -1,32 +1,49 @@
-.roster{
-    background-color: #321448;
-    height: 500px;
-    border-radius: 10px;
-    /* padding: 50px; */
-    margin: 10px;
-}
+/* roster.css */
 
-.roster{
+.roster {
+    background-color: #321448;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+  }
+  
+  h4 {
+    margin: 10px 0;
+  }
+  
+  .our-1 {
     color: rgb(247, 190, 4);
     font-size: 20px;
-}
-
-.our-1{
+  }
+  
+  .rost {
     color: white;
-    margin-left: 15px;
-    margin-top: 10px;
-}
-
-.placeholder{
+  }
+  
+  .placeholder {
     display: flex;
-    margin-left: 100px;
-}
-
-.blank{
-    background-color: #240C38;
-    height: 180px;
+    flex-wrap: wrap;
+    margin: 0 -10px; /* Added negative margin to compensate for the padding/margin of the input fields */
+  }
+  
+  input {
+    flex: 1;
+    margin: 10px; /* Adjusted margin for spacing between input fields */
+    padding: 10px;
+    width: calc(50% - 20px);
+  }
+  
+  .blank {
+    background-color: #240c38;
     border-radius: 10px;
-    /* padding: 50px; */
     margin: 10px;
-    margin-top: 90px;
-}
+    height: 180px;
+  }
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 350px) {
+    input {
+      width: 100%;
+    }
+  }
+  

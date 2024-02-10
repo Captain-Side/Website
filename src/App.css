@@ -3,6 +3,7 @@
 }
 body{
   background-color: #240C38;
+  width: 100%;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

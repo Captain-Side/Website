@@ -1,22 +1,119 @@
- img{
-    height: 100%;
-    width: 261px;
-    margin-left: 33px;
-    /* object-fit: cover; Ensures the image covers the entire container */
-    /* transition: filter 0.3s ease; */
-    object-fit: cover; /* Ensures the image covers the entire container */
-    transition: transform 0.3s ease, filter 0.3s ease;
-    border: 1px solid transparent; 
-    /* border-radius: 10px; */
+
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-img:hover{
-    cursor: pointer;
-    filter: drop-shadow(0 0 5px rgba(2, 254, 241, 0.8));
-    transform: scale(1.05); 
-    filter: brightness(1.2) contrast(1.2); /* Adjust the values for brightness and contrast */
-    animation: pulse-border 1.5s infinite;
-    border-image: linear-gradient(45deg, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255)); /* Add a colorful gradient as the border */
-    border-image-slice: 1; /* Ensure the entire border is filled with the gradient */
-      animation: pulse-border 1.5s infinite; 
+.flip-container {
+  position: relative;
+  perspective: 1000px;
+  margin-right: 2%;
+  width: calc(20% - 2%);
 }
+
+.flip-container:hover .img-1 {
+  transform: rotateY(180deg) scale(1.0); /* Adjust the scale based on your requirements */
+}
+
+.img-1 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.alternate-image {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust the size based on your requirements */
+  max-width: 100%;
+  height: auto;
+  transform: rotateY(180deg) scale(1);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.alternate-image img {
+  width: 100%; /* Ensure the image fits within the container */
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .alternate-image {
+    width: 100%; /* Adjust the size based on your requirements */
+  }
+}
+
+.flip-container:hover .alternate-image {
+  opacity: 1;
+}
+
+.img-1:hover,
+.img-1:active {
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px rgba(2, 254, 241, 0.8)) brightness(1.2) contrast(1.2);
+  transform: scale(1.05) rotate(10deg);
+  animation: pulse-border 1.5s infinite;
+  border-image: linear-gradient(45deg, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255));
+  border-image-slice: 1;
+  transform: scaleX(-1);
+}
+
+@media (max-width: 768px) {
+  .flip-container {
+    width: calc(25% - 2%);
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-container {
+    width: calc(33.333% - 2%);
+  }
+
+  .flip-container:hover .alternate-image {
+    width: 100%; /* Adjust the size based on your requirements */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
