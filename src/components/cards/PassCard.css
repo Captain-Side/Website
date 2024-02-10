@@ -32,7 +32,7 @@
   width: 100%; /* Adjust the size based on your requirements */
   max-width: 100%;
   height: auto;
-  transform: rotateY(180deg) scale(1.0);
+  transform: rotateY(180deg) scale(1);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
