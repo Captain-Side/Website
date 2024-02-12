@@ -15,7 +15,7 @@ export const Navbar = () => {
       <div className="left-side">
         <div className="logo">
           <img src="/assets/CS_logo-1.png" alt="CS Logo" />
-          <p className="logo-text">Captian site</p>
+          <p className="logo-text">Captian side</p>
         </div>
         <FaSearch className="search-icon" />
       </div>
