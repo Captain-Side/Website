@@ -1,25 +1,29 @@
+/* Reset styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Styles for the navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 15px 10px; /* Adjusted padding */
   background-color: #333;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   position: relative;
 }
 
+/* Styles for the left side */
 .left-side {
   display: flex;
   align-items: center;
 }
 
+/* Styles for the logo */
 .logo {
   display: flex;
   align-items: center;
@@ -35,6 +39,7 @@
   font-size: 1.2rem;
 }
 
+/* Styles for the search icon */
 .search-icon {
   font-size: 24px;
   margin-left: 10px;
@@ -42,21 +47,26 @@
   cursor: pointer;
 }
 
+/* Styles for the right side */
 .right-side {
   display: flex;
   align-items: center;
 }
 
+/* Styles for the menu items */
+button{
+  padding-bottom: 20px;
+}
 .menu-items {
   list-style-type: none;
-  padding: 0;
+  padding-top: 10px;
   margin: 0;
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
+  top: 100%;
+  left: 0;
+  width: 100%;
   background-color: #f0f0f0;
-  border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -67,7 +77,6 @@
 }
 
 .menu-items li {
-  margin-right: 0;
   margin-bottom: 10px;
   color: #333;
   padding: 10px 20px;
@@ -79,11 +88,13 @@
   background-color: #ddd;
 }
 
+/* Styles for the menu icon */
 .menu-icon {
   font-size: 24px;
   cursor: pointer;
 }
 
+/* Styles for the login button */
 .login-button {
   background-color: #800080;
   color: #fff;
@@ -96,4 +107,26 @@
 
 .login-button:hover {
   background-color: #9932cc;
+}
+
+/* For desktop mode */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none; /* Hide menu icon in desktop mode */
+  }
+
+  .menu-items {
+    display: flex; /* Display menu items in desktop mode */
+    justify-content: center; /* Center menu items horizontally */
+    position: static;
+    background-color: transparent; /* Remove background color */
+    box-shadow: none; /* Remove box shadow */
+  }
+
+  .menu-items li {
+    margin-bottom: 5px; /* Adjust margin to move menu items a little lower */
+    cursor: pointer;
+    color: #fff; /* Change menu item color */
+  }
+  
 }
