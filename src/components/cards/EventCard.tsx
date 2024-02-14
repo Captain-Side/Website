@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const EventCard = () => {
+export const EventsCard = () => {
   return (
-    <div>EventCard</div>
+    <div>LiveEvents</div>
   )
 }

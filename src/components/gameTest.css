@@ -1,0 +1,241 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.py-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: white;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-dark-purple {
+  background-color: darkpurple;
+  color: white;
+  border: 2px solid gold;
+  transition-duration: 0.4s;
+  border-radius: 500px;
+}
+
+.btn-dark-purple:hover {
+  background-color: darkorchid;
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-body {
+  background-color: black;
+  color: white;
+}
+
+
+.action-button-info {
+  background-color: rgb(69, 20, 69);
+  height: 1;
+  width: 100%; 
+  display: block;
+  text-align: center;
+  padding: 10px; 
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  border-radius: 500px;
+}
+
+
+.title {
+  display: flex;
+  margin-bottom: 10px; 
+}
+
+.live {
+  color: white;
+  margin-right: 5px;
+}
+
+.events {
+  color: gold;
+}
+
+.card {
+  border: 2px solid gold;
+  width: 100%;
+   
+}
+
+.card-body {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+}
+
+.desc-text {
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.action-button {
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  border-radius: 500px;
+
+}
+
+.action-button-battle {
+  background-color: black;
+  
+}
+
+.action-button-watch {
+  background-color: rgb(37, 5, 37);
+}
+.action-button:hover {
+  background-color: darkpurple;
+}
+
+.action-button-battle:hover {
+  background-color: darkgray;
+}
+
+.action-button-watch {
+  background-color: rgb(69, 20, 69);
+  height: 1;
+  width: 100%; /* Set the width to 100% to make it wider */
+  display: block;
+  text-align: center;
+  padding: 10px; /* Adjust padding as needed */
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  border-radius: 500px;
+}
+
+.action-button-watch:hover {
+  background-color: darkorchid;
+}
+
+.btn-dark-purple {
+  background-color: black;
+  color: rgb(241, 231, 241);
+  border: 2px solid gold;
+  transition-duration: 0.4s;
+  border-radius: 500px;
+  
+}
+
+.btn-dark-purple:hover {
+  background-color: rgb(65, 17, 86);
+}
+
+.card {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.view-more-container {
+  margin-bottom: 20px;/* Adjust the margin value as needed */
+}
+
+
+
+
+.action-button-play:hover {
+  background-color:darkgray ;
+  text-decoration:underline;
+
+  
+}
+
+.action-button-info:hover {
+  background-color: rgb(65, 17, 86); }
+
+  .view-more-container {
+    margin-bottom: 20px; /* Adjust the margin value as needed */
+  }
+  
+  .card {
+    margin-bottom: 20px; /* Adjust the margin value as needed */
+  }
+  
+@media screen and (max-width: 500px) {
+  .title{
+    font-size: 1.2rem;
+  }
+  .btn-dark-purple{
+    font-size: 12px;
+  }
+  .card-view{
+    width: 187px;
+    padding: 10px !important;
+  }
+  .card-body{
+    height: auto;
+    justify-content:flex-start;
+    padding: 0;
+  }
+  .action-button{
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+  .action-button-battle{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .card-view{
+    width: 160px;
+  }
+}
