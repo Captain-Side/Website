@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React, { useState } from 'react';
 import './PassCard.css';
@@ -31,4 +29,3 @@ export const PassCard = () => {
 
 
 
->>>>>>> savhar28-update-Sv
