@@ -1,7 +1,7 @@
 /* roster.css */
 
 .roster {
-    background-color: #321448;
+    background-color: #190a24;
     border-radius: 10px;
     margin: 10px;
     overflow: hidden;
@@ -34,7 +34,7 @@
   }
   
   .blank {
-    background-color: #240c38;
+    background-color: #190a24;
     border-radius: 10px;
     margin: 10px;
     height: 180px;

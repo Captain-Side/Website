@@ -1,7 +1,7 @@
 .image-container {
   display: flex;
   gap: 16px; 
-  overflow-x: auto; 
+  overflow-x: scroll; 
 }
 
 .flip-container {
@@ -21,6 +21,17 @@
   margin-left: 9px;
   margin-right: 8px;
 }
+
+@media (max-width: 769px ) {
+  .image-container{
+    width: 1000px;
+  }
+
+  .scroll-container{
+    overflow: scroll;
+  }
+    
+  }
 
 .flip-container .flipped-image {
   transform: rotateY(180deg) scale(1.0);

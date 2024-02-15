@@ -58,6 +58,7 @@ button{
   padding-bottom: 20px;
 }
 .menu-items {
+  z-index: 10;
   list-style-type: none;
   padding-top: 10px;
   margin: 0;
@@ -69,6 +70,7 @@ button{
   background-color: #f0f0f0;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
 }
 
 .menu-items.active {
@@ -85,7 +87,11 @@ button{
 }
 
 .menu-items li:hover {
-  background-color: #ddd;
+  background-color: #800080;
+}
+
+menu-items li button {
+  background-color: #fff;
 }
 
 /* Styles for the menu icon */
@@ -95,7 +101,10 @@ button{
 }
 
 /* Styles for the login button */
-.login-button {
+.login{
+  margin-bottom: 5px;
+}
+.login button{
   background-color: #800080;
   color: #fff;
   border: none;
@@ -103,10 +112,12 @@ button{
   padding: 8px 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left: 10px;
+  align-items: center;
 }
 
-.login-button:hover {
-  background-color: #9932cc;
+.login button:hover {
+ background-color: #a505a5;
 }
 
 /* For desktop mode */

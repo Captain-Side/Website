@@ -26,9 +26,10 @@ export const Navbar = () => {
           <li>Testing</li>
           <li>Game Pass</li>
           <li>Contact Us</li>
-          <li>
-            <button className="login-button">Login</button>
-          </li>
+          <div className='login'>
+          <button className="login-button">Login</button>
+          </div>
+            
         </ul>
         <FaBars className="menu-icon" onClick={toggleMenu} />
       </div>
