@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './LiveEvents.module.css'; // Ensure correct import path for styles
 
-const LiveEvents = () => {
+export const LiveEvents = () => {
   return (
     <div className={styles.main}>
       {/* Your component content */}
@@ -13,5 +13,3 @@ const LiveEvents = () => {
     </div>
   );
 };
-
-export default LiveEvents;

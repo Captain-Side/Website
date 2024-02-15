@@ -6,7 +6,7 @@ import img3 from "../assets/latest/Cyberpunk.jpg";
 import img4 from "../assets/latest/Valo.jpg";
 import img5 from "../assets/latest/vaaloo.png";
 
-const Latest = () => {
+export const Latest = () => {
   const [active, setActive] = useState(0);
 
   const items = [
@@ -94,5 +94,3 @@ const Latest = () => {
     </div>
   );
 };
-
-export default Latest;

@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import { Navbar } from './components/Navbar.jsx';
-import { Latest } from './components/Latest.tsx';
-import { LiveEvents } from './components/LiveEvents.tsx';
+import { Latest } from './components/Latest.jsx';
+import { LiveEvents } from './components/LiveEvents.jsx';
 import { GamePass } from './components/GamePass.tsx';
 import { AboutUs } from './components/AboutUs.tsx';
 import { Roster } from './components/Roster.tsx';
