@@ -1,0 +1,19 @@
+.conus{
+    background-color: #321448;
+    height: 180px;
+    border-radius: 10px;
+    /* padding: 50px; */
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.us{
+    color: white;
+    font-size: 20px;
+}
+
+.con{
+    color: white;
+    margin-left: 15px;
+    margin-top: 10px;
+}

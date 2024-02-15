@@ -1,0 +1,89 @@
+.gamepass{
+    background-color: #321448;
+    height: 800px;
+    border-radius: 10px;
+    /* padding: 50px; */
+    margin: 10px;
+}
+
+.pass{
+    color: rgb(247, 190, 4);
+    font-size: 20px;
+}
+
+.game{
+    color: white;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.view{
+    color: white;
+    margin-left: 1280px;
+    font-weight: 600;
+    font-size: small;
+    
+}
+
+.view:hover {
+    color: rgb(146, 248, 3);
+    cursor: pointer;/* New background color on hover */
+  }
+  .underline-text {
+    text-decoration: underline;
+  }
+
+
+  /* @media screen and (max-width: 870px){
+    .gamepass{
+        background-color: #321448;
+        height: 1100px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    
+    
+
+  }
+
+  @media screen and (max-width: 869px){
+    .gamepass{
+        background-color: #321448;
+        height: 1120px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+}
+
+  @media screen and (max-width: 900px){
+    .gamepass{
+        background-color: #321448;
+        height: 780px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+  }
+
+
+  @media screen and (max-width: 600px){
+    .gamepass{
+        background-color: #321448;
+        height: 1000px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+  } */
+
+
+  @media screen and (max-width: 2500px){
+    .gamepass{
+        background-color: #321448;
+        height: auto;
+        border-radius: 10px;
+        margin: 10px;
+        width: auto;
+    }
+}
