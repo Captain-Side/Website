@@ -5,7 +5,7 @@ import {PassCard} from '../components/cards/PassCard.tsx'
 
 export const GamePass = () => {
   return (
-    <div>
+    <div id='game-pass'>
     <h3 className='h3c'><span className='game'>GAME</span> <span className='pass'>PASS</span> </h3>
     <div className='gamepass'>
     

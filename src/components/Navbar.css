@@ -4,6 +4,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 /* Styles for the navbar */
 .navbar {
@@ -140,4 +143,8 @@ menu-items li button {
     color: #fff; /* Change menu item color */
   }
   
+}
+ a:hover{
+  color: #fff;
+  text-decoration: none;
 }

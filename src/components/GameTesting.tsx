@@ -16,7 +16,7 @@ const GameTesting = () => {
   const visibleGamesSlice = gameData.games.slice(0, visibleGames);
 
   return (
-    <section className='py-3 container' style={{ backgroundColor: '' }}>
+    <section className='py-3 container' style={{ backgroundColor: '' }} id='game-testing'>
       <div className='d-flex justify-content-between align-items-center view-more-container'>
         <h1 className="title">
           <span className="live">GAME</span> <span className="events">TESTING</span>
