@@ -13,7 +13,7 @@ html{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10px; /* Adjusted padding */
+  padding: 5px 10px; /* Adjusted vertical padding */
   background-color: #333;
   color: #fff;
   font-family: 'Roboto', sans-serif;
@@ -82,7 +82,7 @@ button{
 }
 
 .menu-items li {
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Adjusted margin between list items */
   color: #333;
   padding: 10px 20px;
   cursor: pointer;
@@ -93,8 +93,8 @@ button{
   background-color: #800080;
 }
 
-menu-items li button {
-  background-color: #fff;
+.menu-items li button {
+  background-color: #800080;
 }
 
 /* Styles for the menu icon */
@@ -106,9 +106,10 @@ menu-items li button {
 /* Styles for the login button */
 .login{
   margin-bottom: 5px;
+  
 }
 .login button{
-  background-color: #800080;
+  background-color: #800080; /* Changed back to pink */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -121,6 +122,11 @@ menu-items li button {
 
 .login button:hover {
  background-color: #a505a5;
+}
+
+/* Modify hover styles to remove outside coloring */
+.login button:hover {
+  background-color: #a505a5; /* Change button color on hover */
 }
 
 /* For desktop mode */
@@ -142,9 +148,8 @@ menu-items li button {
     cursor: pointer;
     color: #fff; /* Change menu item color */
   }
-  
 }
- a:hover{
+a:hover{
   color: #fff;
   text-decoration: none;
 }
