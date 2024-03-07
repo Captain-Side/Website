@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './PassCard.css';
-import passcardData from './PassCardData';
+import passcardData from '../../components/cards/PassCardData';
 
 export const PassCard = () => {
   const [flippedIndex, setFlippedIndex] = useState(null);

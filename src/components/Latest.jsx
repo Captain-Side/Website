@@ -1,21 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./Latest.css";
-import img1 from "../assets/latest/Anthem.jpg";
-import img2 from "../assets/latest/Bgmi.jpg";
-import img3 from "../assets/latest/Cyberpunk.jpg";
-import img4 from "../assets/latest/Valo.jpg";
-import img5 from "../assets/latest/vaaloo.png";
+import LatestData from "./LatestData.jsx"
 
 export const Latest = () => {
   const [active, setActive] = useState(0);
 
-  const items = [
-    { src: img1, link: "https://example.com/1" },
-    { src: img2, link: "https://example.com/2" },
-    { src: img3, link: "https://example.com/3" },
-    { src: img4, link: "https://example.com/4" },
-    { src: img5, link: "https://example.com/5" }
-  ];
+const items = LatestData.items;
 
   const lengthItems = items.length - 1;
 

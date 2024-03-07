@@ -18,7 +18,7 @@ export const Navbar = () => {
         <Link to="/">
           <div className="logo">
             <img src="/assets/CS_logo-1.png" alt="CS Logo" />
-            <p className="logo-text">Captain side</p>
+            <p className="logo-text">CaptainSide</p>
           </div>
         </Link>
         <FaSearch className="search-icon" />
@@ -32,19 +32,21 @@ export const Navbar = () => {
           <li><a href="#contact">Contact Us</a></li>
 
           <li>
-          { user ? (
-          <div className='login'>
-            {/* Button with onClick event handler */}
-            <button onClick={logoutUser} className="login-button">Logout</button>
-          </div>
-          ): <div className='login'>
-          {/* Button with onClick event handler */}
-          <Link to="/login"> 
-          <button>Login</button> 
-          </Link>
-        </div>
-        }
-          </li>
+            { user ? (
+              <div className='navbar-login'>
+                {/* Button with onClick event handler */}
+                <button onClick={logoutUser} className="navbar-login-button">Logout</button>
+              </div>
+              ): 
+              <div className='navbar-login'>
+                {/* Button with onClick event handler */}
+                <Link to="/login" className="navbar-login-button"> 
+                  <button>Login</button> 
+                </Link>
+              </div>
+            }
+        </li>
+
         </ul>
         <FaBars className="menu-icon" onClick={toggleMenu} />
       </div>

@@ -17,8 +17,8 @@ const HomePage = () => {
       <Navbar />
       <Latest id="latest" />
       <LiveEvents id="live-events" />
-      <GamePass id="game-pass" />
       <GameTest id="game-test" />
+      <GamePass id="game-pass" />
       <GameTesting id="game-testing" />
       <AboutUs id="about-us" />
       <Footer />

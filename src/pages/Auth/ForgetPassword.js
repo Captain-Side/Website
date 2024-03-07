@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Footer } from "../../components/Footer.tsx";
 import { Navbar } from "../../components/Navbar.jsx";
 import { useAuth } from "../../utils/AuthContext.js";
-import "../../styles/Login.css";
+import "./Auth.css";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -39,26 +39,31 @@ const ForgotPassword = () => {
   return (
     <>
       <Navbar />
-      <div className="login-container">
-        <h1 className="login-title">Forgot Password</h1>
+      <div className="auth-login-container">
+        <h1 className="auth-login-title">Forgot Password</h1>
         <form
           ref={forgetPassFormRef}
           onSubmit={handleSubmit}
-          className="login-form"
+          className="auth-login-form"
         >
-          <div className="input-field">
+          <div className="auth-input-field">
             <label htmlFor="email">Email Address:</label>
             <input
               type="email"
               id="email"
+              placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
               disabled={loading} // Disable input field when loading
             />
           </div>
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <button type="submit" className="login-button" disabled={loading}>
+          {errorMessage && <p className="auth-error-message">{errorMessage}</p>}
+          <button
+            type="submit"
+            className="auth-login-button"
+            disabled={loading}
+          >
             {loading ? "Submitting..." : "Reset Password"}{" "}
             {/* Display appropriate text based on loading state */}
           </button>

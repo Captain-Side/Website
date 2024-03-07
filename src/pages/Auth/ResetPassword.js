@@ -24,14 +24,14 @@ function ResetPassword() {
   };
 
   return (
-    <div className="login-container">
-      <h1 className="login-title">Reset Password</h1>
+    <div className="auth-login-container">
+      <h1 className="auth-login-title">Reset Password</h1>
       <form
         ref={ResetPasswordFrom}
         onSubmit={handleSubmit}
-        className="login-form"
+        className="auth-login-form"
       >
-        <div className="input-field">
+        <div className="auth-input-field">
           <label htmlFor="password">New Password:</label>
           <input
             type="password"
@@ -42,7 +42,7 @@ function ResetPassword() {
             required
           />
         </div>
-        <div className="input-field">
+        <div className="auth-input-field">
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <input
             type="password"
@@ -54,9 +54,9 @@ function ResetPassword() {
           />
         </div>
         {!passwordMatch && (
-          <p className="error-message">Passwords do not match.</p>
+          <p className="auth-error-message">Passwords do not match.</p>
         )}
-        <button type="submit" className="login-button">
+        <button type="submit" className="auth-login-button">
           Reset Password
         </button>
       </form>
