@@ -41,6 +41,9 @@ html {
 .logo-text {
   font-weight: bold;
   font-size: 1.2rem;
+  color: white !important; /* Change text color to white */
+  margin: 0; /* Reset all margins */
+  padding-top: 5px; /* Adjusted padding to vertically align with the logo image */
 }
 
 /* Styles for the search icon */
@@ -105,8 +108,8 @@ html {
 
 /* Styles for the login button */
 .navbar-login {
-  margin-bottom: 5px;
-
+ 
+  margin-right: 20px; /* Increase margin on the left side */
 }
 
 .navbar-login-button {
@@ -117,13 +120,11 @@ html {
   padding: 8px 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 10px;
-  align-items: center;
 }
 
 /* Hover styles for login button */
 .navbar-login-button:hover {
-  background-color: none;
+  background-color: #700370;
 }
 
 /* For desktop mode */
@@ -144,6 +145,11 @@ html {
     margin-bottom: 5px;
     cursor: pointer;
     color: #fff;
+  }
+  
+  .navbar-login{
+    margin-right: 0%;
+    margin-left: 10px;
   }
 }
 

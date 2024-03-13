@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "../components/Navbar.jsx";
-import { Latest } from "../components/Latest";
+import Latest from "../components/Latest";
 import { LiveEvents } from "../components/LiveEvents.jsx";
 import { GamePass } from "../components/GamePass.tsx";
 import GameTesting from "../components/GameTesting.tsx";
@@ -9,7 +9,6 @@ import { AboutUs } from "../components/AboutUs.tsx";
 import { Footer } from "../components/Footer.tsx";
 import { Roster } from "../components/Roster.tsx";
 import { Service } from "../components/Service.tsx";
-import { Contact } from "../components/Contact.tsx";
 
 const HomePage = () => {
   return (
@@ -24,7 +23,6 @@ const HomePage = () => {
       <Footer />
       <Roster id="roster" />
       <Service id="service" />
-      <Contact id="contact" />
     </div>
   );
 };

@@ -29,8 +29,9 @@ export const Navbar = () => {
           <li><a href="#live-events">Events</a></li>
           <li><a href="#game-testing">Testing</a></li>
           <li><a href="#game-pass">Game Pass</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-
+          <li><a href="/contact">Contact Us</a></li>
+          </ul>
+          <ul>
           <li>
             { user ? (
               <div className='navbar-login'>

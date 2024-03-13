@@ -3,6 +3,7 @@ import { Footer } from "../../components/Footer.tsx";
 import { Navbar } from "../../components/Navbar.jsx";
 import { useAuth } from "../../utils/AuthContext.js";
 import "./Auth.css";
+import LoadingPage from "../LoadingPage.jsx";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -64,7 +65,7 @@ const ForgotPassword = () => {
             className="auth-login-button"
             disabled={loading}
           >
-            {loading ? "Submitting..." : "Reset Password"}{" "}
+            {loading ? LoadingPage : "Reset Password"}{" "}
             {/* Display appropriate text based on loading state */}
           </button>
         </form>

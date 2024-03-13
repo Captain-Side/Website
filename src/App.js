@@ -17,6 +17,7 @@ import ResetPassword from "./pages/Auth/ResetPassword.js";
 import LatestData from "./components/LatestData.jsx";
 import gameData from "./components/GameData.jsx";
 import passcardData from "./components/cards/PassCardData.jsx";
+import Contact from "./components/ContactUs/Contact.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
