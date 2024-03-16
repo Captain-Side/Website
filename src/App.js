@@ -14,6 +14,10 @@ import GameTesting from "./pages/Admin/GameTesting.js";
 import Roster from "./pages/Admin/Roster.js";
 import { AuthProvider } from "./utils/AuthContext.js";
 import ResetPassword from "./pages/Auth/ResetPassword.js";
+import LatestData from "./components/LatestData.jsx";
+import gameData from "./components/GameData.jsx";
+import passcardData from "./components/cards/PassCardData.jsx";
+import Contact from "./components/ContactUs/Contact.jsx";
 
 function App() {
   return (
@@ -21,6 +25,7 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
@@ -28,12 +33,21 @@ function App() {
 
           <Route path="/admin/" element={<AdminRoute />}>
             <Route path="dashboard" element={<AdminDashboard />} />
-            <Route path="dashboard/edit-slideshow" element={<Slideshow />} />
-            <Route path="dashboard/edit-gamepass" element={<GamePass />} />
-            <Route path="dashboard/edit-events" element={<Events />} />
+            <Route
+              path="dashboard/edit-slideshow"
+              element={<Slideshow images={LatestData.items} />}
+            />
+            <Route
+              path="dashboard/edit-gamepass"
+              element={<GamePass gamepasses={passcardData.games} />}
+            />
+            <Route
+              path="dashboard/edit-events"
+              element={<Events images={gameData.games} />}
+            />
             <Route
               path="dashboard/edit-gametesting"
-              element={<GameTesting />}
+              element={<GameTesting images={gameData.games} />}
             />
             <Route path="dashboard/edit-roster" element={<Roster />} />
           </Route>

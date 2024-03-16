@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../../styles/Register.css";
+import "./Auth.css";
 import { Footer } from "../../components/Footer.tsx";
 import { Navbar } from "../../components/Navbar.jsx";
 import { useAuth } from "../../utils/AuthContext.js";
@@ -76,64 +76,68 @@ const Register = () => {
   return (
     <>
       <Navbar />
-      <div className="login-container">
-        <h1 className="login-title">Register</h1>
+      <div className="auth-login-container">
+        <h1 className="auth-login-title">Register</h1>
         <form
           ref={registerForm}
           onSubmit={handleRegister}
-          className="login-form"
+          className="auth-login-form"
         >
-          <div className="input-field">
+          <div className="auth-input-field">
             <label htmlFor="username">Username:</label>
             <input
               type="text"
               id="username"
+              placeholder="Enter your Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
             />
           </div>
-          <div className="input-field">
+          <div className="auth-input-field">
             <label htmlFor="firstName">First Name:</label>
             <input
               type="text"
               id="firstName"
+              placeholder="Enter your first name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               required
             />
           </div>
-          <div className="input-field">
+          <div className="auth-input-field">
             <label htmlFor="lastName">Last Name:</label>
             <input
               type="text"
               id="lastName"
+              placeholder="Enter your last name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               required
             />
           </div>
-          <div className="input-field">
+          <div className="auth-input-field">
             <label htmlFor="email">Email Address:</label>
             <input
               type="email"
               id="email"
+              placeholder="Enter you email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div className="input-field">
+          <div className="auth-input-field">
             <label htmlFor="discordId">Discord id:</label>
             <input
               type="text"
               id="discordId"
-              placeholder="optional"
+              placeholder="Enter your discord id"
               value={discordId}
               onChange={(e) => setDiscordId(e.target.value)}
             />
           </div>
-          <div className="input-field">
+          <div className="auth-input-field">
             <label htmlFor="password1">Password:</label>
             <input
               type="password"
@@ -144,7 +148,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="input-field">
+          <div className="auth-input-field">
             <label htmlFor="confirmPassword">Confirm Password:</label>
             <input
               type="password"
@@ -155,20 +159,21 @@ const Register = () => {
               required
             />
           </div>
-          <div className="input-field">
+          <div className="custom-auth-input-field">
             <input
               type="checkbox"
               id="agreeToTerms"
+              className="custom-checkbox"
               value={agreeToTerms}
               onChange={(e) => setAgreeToTerms(e.target.checked)}
             />
-            <label htmlFor="agreeToTerms">
+            <label htmlFor="agreeToTerms" className="custom-label">
               I agree to the terms and conditions.
             </label>
           </div>
 
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <button type="submit" className="login-button">
+          {errorMessage && <p className="auth-error-message">{errorMessage}</p>}
+          <button type="submit" className="auth-login-button">
             Sign Up
           </button>
         </form>

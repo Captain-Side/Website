@@ -4,7 +4,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -13,7 +14,7 @@ html{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px; /* Adjusted vertical padding */
+  padding: 10px; /* Adjusted padding */
   background-color: #333;
   color: #fff;
   font-family: 'Roboto', sans-serif;
@@ -40,6 +41,9 @@ html{
 .logo-text {
   font-weight: bold;
   font-size: 1.2rem;
+  color: white !important; /* Change text color to white */
+  margin: 0; /* Reset all margins */
+  padding-top: 5px; /* Adjusted padding to vertically align with the logo image */
 }
 
 /* Styles for the search icon */
@@ -57,9 +61,6 @@ html{
 }
 
 /* Styles for the menu items */
-button{
-  padding-bottom: 20px;
-}
 .menu-items {
   z-index: 10;
   list-style-type: none;
@@ -91,10 +92,12 @@ button{
 
 .menu-items li:hover {
   background-color: #800080;
+  border-radius: 5px;
 }
 
 .menu-items li button {
   background-color: #800080;
+  color: #fff; /* Added color */
 }
 
 /* Styles for the menu icon */
@@ -104,52 +107,53 @@ button{
 }
 
 /* Styles for the login button */
-.login{
-  margin-bottom: 5px;
-  
+.navbar-login {
+ 
+  margin-right: 20px; /* Increase margin on the left side */
 }
-.login button{
-  background-color: #800080; /* Changed back to pink */
+
+.navbar-login-button {
+  background-color: #800080;
   color: #fff;
   border: none;
   border-radius: 5px;
   padding: 8px 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 10px;
-  align-items: center;
 }
 
-.login button:hover {
- background-color: #a505a5;
-}
-
-/* Modify hover styles to remove outside coloring */
-.login button:hover {
-  background-color: #a505a5; /* Change button color on hover */
+/* Hover styles for login button */
+.navbar-login-button:hover {
+  background-color: #700370;
 }
 
 /* For desktop mode */
 @media (min-width: 769px) {
   .menu-icon {
-    display: none; /* Hide menu icon in desktop mode */
+    display: none;
   }
 
   .menu-items {
-    display: flex; /* Display menu items in desktop mode */
-    justify-content: center; /* Center menu items horizontally */
+    display: flex;
+    justify-content: center;
     position: static;
-    background-color: transparent; /* Remove background color */
-    box-shadow: none; /* Remove box shadow */
+    background-color: transparent;
+    box-shadow: none;
   }
 
   .menu-items li {
-    margin-bottom: 5px; /* Adjust margin to move menu items a little lower */
+    margin-bottom: 5px;
     cursor: pointer;
-    color: #fff; /* Change menu item color */
+    color: #fff;
+  }
+  
+  .navbar-login{
+    margin-right: 0%;
+    margin-left: 10px;
   }
 }
-a:hover{
+
+a:hover {
   color: #fff;
   text-decoration: none;
 }

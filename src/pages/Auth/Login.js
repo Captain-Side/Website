@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "../../styles/Login.css";
+import "./Auth.css";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer.tsx";
 import { useAuth } from "../../utils/AuthContext.js";
@@ -34,10 +34,14 @@ const Login = () => {
   return (
     <>
       <Navbar />
-      <div className="login-container">
-        <h1 className="login-title">Login</h1>
-        <form ref={loginForm} onSubmit={handleSubmit} className="login-form">
-          <div className="input-field">
+      <div className="auth-login-container">
+        <h1 className="auth-login-title">Login</h1>
+        <form
+          ref={loginForm}
+          onSubmit={handleSubmit}
+          className="auth-login-form"
+        >
+          <div className="auth-input-field">
             <label htmlFor="email">Email Address:</label>
             <input
               type="email"
@@ -48,7 +52,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="input-field">
+          <div className="auth-input-field">
             <label htmlFor="password">Password:</label>
             <input
               type="password"
@@ -59,14 +63,14 @@ const Login = () => {
               required
             />
           </div>
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <button type="submit" className="login-button">
+          {errorMessage && <p className="auth-error-message">{errorMessage}</p>}
+          <button type="submit" className="auth-login-button">
             Login
           </button>
-          <p className="forgot-password">
+          <p className="auth-forgot-password">
             <a href="/forgotpassword">Forgot Password?</a>
           </p>
-          <p className="register-link">
+          <p className="auth-register-link">
             <a href="/register">Didn't have account? Register</a>
           </p>
         </form>

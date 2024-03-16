@@ -3,6 +3,7 @@ import { createContext, useState, useEffect, useContext } from "react";
 import { account } from "../config/AppwriteConfig";
 import { useNavigate } from "react-router-dom";
 import { ID } from "appwrite";
+import LoadingPage from "../pages/LoadingPage";
 
 const AuthContext = createContext();
 
@@ -136,7 +137,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider value={contextData}>
-      {loading ? <p>Loading...</p> : children}
+      {loading ? LoadingPage : children}
     </AuthContext.Provider>
   );
 };
