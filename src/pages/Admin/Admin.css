@@ -1,0 +1,102 @@
+/* Admin.css */
+
+.admin-edit-slideshow-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Dark gray color */
+  margin-bottom: 20px;
+}
+
+.admin-add-image-section {
+  background-color: #f2f2f2; /* Light gray background */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.admin-add-image-section h2 {
+  margin-bottom: 10px;
+}
+
+.admin-add-image-controls {
+  display: flex;
+  align-items: center;
+}
+
+.admin-add-image-controls input[type="file"] {
+  margin-right: 10px;
+}
+
+.admin-add-image-controls button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.admin-image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.admin-image-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-image-item img {
+  max-width: 100%;
+  max-height: 200px;
+  height: auto;
+}
+
+.admin-image-item button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+/* AdminMenu.css */
+
+.text-center {
+  text-align: center;
+}
+
+.dashboard-menu {
+  margin-top: 20px;
+}
+
+.dashboard-menu h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* Change text color to white */
+  background-color: #7e05a3; /* Adjusted lighter background color */
+  padding: 10px; /* Add padding for better visibility */
+  border-radius: 5px; /* Add border-radius for better appearance */
+  margin-bottom: 20px;
+}
+
+.dashboard-menu .list-group-item {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 0;
+  color: #333;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-menu .list-group-item:hover {
+  background-color: #ddd;
+}
+
+.dashboard-menu .list-group-item.active {
+  background-color: #ddd;
+  
+}

@@ -1,0 +1,94 @@
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: white; /* Set background color to white */
+    border: 1px solid #ddd; /* Optional subtle border */
+  }
+  
+  .contact-container h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333; /* Consistent color for headings */
+    font-family: Arial, sans-serif; /* Example font family */
+  }
+  
+  .contact-container p {
+    margin-bottom: 20px;
+    color: #666; /* Lighter grey for better contrast */
+    font-size: 16px; /* Example font size for body text */
+  }
+  
+  .contact-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .contact-options-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #800080; /* Darker shade of purple */  
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: Arial, sans-serif; /* Example font family */
+  }
+  
+  
+  .contact-options-container button:hover {
+    background-color: #c080d7; /* Darker shade of purple on hover */
+    color: #f0f0f0; /* Lighter text color on hover */
+  }
+
+  /* contact from css */
+
+  .contact-form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: white; /* White background */
+  }
+  
+  .contact-container h3 {
+    font-size: 1.8em; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 20px; /* More space below */
+    color: #000; /* Black color */
+     
+    text-align: center; /* Center align the text (optional) */
+  }
+  
+  
+  .contact-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333; /* Dark grey text color */
+  }
+  
+  .contact-form-group input[type="text"],
+  .contact-form-group input[type="email"],
+  .contact-form-group input[type="tel"],
+  .contact-form-group textarea,
+  .contact-form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Reduced corner radius */
+    color: #333; /* Dark grey text color */
+  }
+  
+  .contact-form-group input[type="text"]::placeholder,
+  .contact-form-group input[type="email"]::placeholder,
+  .contact-form-group input[type="tel"]::placeholder,
+  .contact-form-group textarea::placeholder {
+    color: #999; /* Lighter grey for placeholder text */
+  }
+
+  
+  
