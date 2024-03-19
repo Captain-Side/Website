@@ -5,6 +5,7 @@
   width: 100%; /* Ensure the slider occupies full width */
   margin: 0 auto;
   padding: 20px; /* Add padding from all sides */
+  max-width: 1500px;
 }
 
 /* Styles for the images within the slider */
