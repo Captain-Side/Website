@@ -1,15 +1,18 @@
 .gamepass{
     background-color: #190a24;
-    height: 800px;
     border-radius: 10px;
     /* padding: 50px; */
     margin-left: 5px;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 1sspx;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .h3c{
   margin-bottom: 5px;
+  max-width: 1400px;
+    margin: 0 auto;
 }
 
 .pass{
