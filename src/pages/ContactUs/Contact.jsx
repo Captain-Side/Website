@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './contact.css'; // Import CSS file for styling
 import ContactForm from './ContactForm';
+import { Navbar } from '../../components/Navbar';
 
 const Contact = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -10,6 +11,8 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="contact-container">
       <h2>Contact Us</h2>
       <p> Heya!! Thank you for reaching out to us, if you wanna collab or have any query please choose an option below to get in touch with us.</p>
@@ -23,6 +26,7 @@ const Contact = () => {
 
       {selectedOption && <ContactForm selectedOption={selectedOption} />}
     </div>
+    </>
   );
 };
 

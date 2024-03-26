@@ -9,10 +9,9 @@ const Register = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [discordId, setDiscordId] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [agreeToTerms, setAgreeToTerms] = useState(false);
+  const [pendingVerification, setPendingVerification] = useState(false);
+  const [code, setCode] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   const { registerUser } = useAuth();
@@ -27,20 +26,9 @@ const Register = () => {
       !firstName ||
       !lastName ||
       !email ||
-      !password ||
-      !confirmPassword
+      !password
     ) {
       setErrorMessage("Please fill in all fields.");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setErrorMessage("Passwords do not match.");
-      return;
-    }
-
-    if (!agreeToTerms) {
-      setErrorMessage("Please agree to the terms and conditions.");
       return;
     }
 
@@ -50,9 +38,7 @@ const Register = () => {
       Firstname: firstName,
       Lastname: lastName,
       email: email, // Use the state variable directly
-      discordId: discordId,
       password1: password, // Changed to password
-      password2: confirmPassword, // Changed to confirmPassword
     };
 
     registerUser(userInfo)
@@ -63,10 +49,7 @@ const Register = () => {
         setFirstName("");
         setLastName("");
         setEmail("");
-        setDiscordId("");
         setPassword("");
-        setConfirmPassword("");
-        setAgreeToTerms(false);
       })
       .catch((error) => {
         setErrorMessage(error.message); // Update error message based on server response
@@ -128,16 +111,6 @@ const Register = () => {
             />
           </div>
           <div className="auth-input-field">
-            <label htmlFor="discordId">Discord id:</label>
-            <input
-              type="text"
-              id="discordId"
-              placeholder="Enter your discord id"
-              value={discordId}
-              onChange={(e) => setDiscordId(e.target.value)}
-            />
-          </div>
-          <div className="auth-input-field">
             <label htmlFor="password1">Password:</label>
             <input
               type="password"
@@ -148,30 +121,6 @@ const Register = () => {
               required
             />
           </div>
-          <div className="auth-input-field">
-            <label htmlFor="confirmPassword">Confirm Password:</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              placeholder="Enter 8 digit password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
-            />
-          </div>
-          <div className="custom-auth-input-field">
-            <input
-              type="checkbox"
-              id="agreeToTerms"
-              className="custom-checkbox"
-              value={agreeToTerms}
-              onChange={(e) => setAgreeToTerms(e.target.checked)}
-            />
-            <label htmlFor="agreeToTerms" className="custom-label">
-              I agree to the terms and conditions.
-            </label>
-          </div>
-
           {errorMessage && <p className="auth-error-message">{errorMessage}</p>}
           <button type="submit" className="auth-login-button">
             Sign Up
