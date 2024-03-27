@@ -2,13 +2,21 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import './Navbar.css';
 import { FaSearch, FaBars } from 'react-icons/fa';
-import {SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
+import {SignedIn, SignedOut, UserButton, useSession } from '@clerk/clerk-react';
+import { checkUserRole } from '../utils/clerkUser';
 
 export const Navbar = () => {
 
+  const { session } = useSession();
+  const userRole = checkUserRole(session);
+  console.log("UserRol: ", userRole);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
+  const links = [
+    { title: 'Dashboard', url: '/admin/dashboard', role: 'admin'},
+    // Add more placeholder links as needed
+  ];
 
   const toggleMenu = () => {
 
@@ -34,13 +42,17 @@ export const Navbar = () => {
           <li><a href="#game-testing">Testing</a></li>
           <li><a href="#game-pass">Game Pass</a></li>
           <li><a href="/contact">Contact Us</a></li>
-
+          <SignedIn>
+    {(userRole === 'org:admin')  ? (
+      <li><a href="/admin/dashboard">Dashboard</a>
+      </li>
+    ) : null}</SignedIn>
           <li>
           <SignedOut>
             <a href="/login"> Login</a>
           </SignedOut>
           <SignedIn>
-            <UserButton />
+            <UserButton afterSignOutUrl='/'/>
           </SignedIn>
           </li>
         </ul>

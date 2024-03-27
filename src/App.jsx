@@ -16,6 +16,7 @@ import LatestData from "./components/LatestData.jsx";
 import gameData from "./components/GameData.jsx";
 import passcardData from "./components/cards/PassCardData.jsx";
 import Contact from "./pages/ContactUs/Contact.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login/cs/resetpassword" element={<ResetPassword />} />
+        <Route path="*" element={<NotFoundPage />} />
         <Route path="/admin/*" element={<AdminRoute />}>
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route
