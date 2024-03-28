@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Footer } from "../../components/Footer.tsx";
 import { Navbar } from "../../components/Navbar.jsx";
-import { useAuth } from "../../utils/AuthContext.js";
 import "./Auth.css";
 import LoadingPage from "../LoadingPage.jsx";
 
