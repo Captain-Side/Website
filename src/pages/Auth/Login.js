@@ -45,6 +45,7 @@ const Login = () => {
     try {
       const result = await signIn.create({
         strategy: 'oauth_google',
+        identifier: 'oauth_google'
       });
 
       if (result.status === "complete") {
@@ -65,7 +66,8 @@ const Login = () => {
     try {
       const result = await signIn.create({
         strategy: 'oauth_discord',
-        redirectUrl: '/'
+        redirectUrl: '/',
+        identifier: 'oauth_discord'
       });
 
       if (result.status === "complete") {

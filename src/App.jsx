@@ -28,6 +28,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login/cs/resetpassword" element={<ResetPassword />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/404" element={<NotFoundPage />} />
         <Route path="/admin/*" element={<AdminRoute />}>
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route

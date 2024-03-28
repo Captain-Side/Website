@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-class NotFoundPage extends React.Component{
-    render(){
-        return <div>
+
+
+const NotFoundPage = () =>{
+    return(
+        <div>
             
-            <p style={{textAlign:"center"}}>
+            <p style={{textAlign:"center"}} className='text-white'>Hello
               <Link to="/">Go to Home </Link>
             </p>
-          </div>;
-    }
+          </div>
+    )
 }
 export default NotFoundPage;

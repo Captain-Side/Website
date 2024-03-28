@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import {useSession} from "@clerk/clerk-react";
+import { checkUserRole } from "../../utils/clerkUser";
+import NotFoundPage from "../NotFoundPage";
 
 const Events = ({ images, onUpdateImages }) => {
   const [newImage, setNewImage] = useState(null);
@@ -9,7 +12,15 @@ const Events = ({ images, onUpdateImages }) => {
 
   const handleReplaceImage = (index) => {};
 
-  return (
+  const { session } = useSession();
+  const userRole = checkUserRole(session);
+
+  return (userRole!=="org:admin")
+  ?(<>
+  <NotFoundPage />
+  </>
+  )
+  :(
     <div style={{ backgroundColor: "white", padding: "20px" }}>
       <h1 className="admin-edit-slideshow-heading">Edit Events</h1>
 
