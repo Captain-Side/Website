@@ -1,34 +1,87 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import "./Auth.css";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer.tsx";
-import { useAuth } from "../../utils/AuthContext.js";
+import { useSignIn} from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { isLoaded, signIn, setActive } = useSignIn();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState(""); // Define setErrorMessage state
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const { user, loginUser } = useAuth();
-  const navigate = useNavigate();
-  const loginForm = useRef(null);
-
-  useEffect(() => {
-    if (user) {
-      navigate("/");
-    }
-  }, [user, navigate]); // Include dependencies in useEffect
-
-  const handleSubmit = (e) => {
+  const handleSignInWithEmailAndPassword = async (e) => {
     e.preventDefault();
 
-    const email = loginForm.current.email.value;
-    const password = loginForm.current.password.value;
+    if (!isLoaded) {
+      return;
+    }
 
-    const userInfo = { email, password };
+    try {
+      const result = await signIn.create({
+        identifier: email,
+        password,
+        redirectUrl: '/'
+      });
+ 
+      if (result.status === "complete") {
+        await setActive({ session: result.createdSessionId });
+        navigate("/");
+      }
+      else {
+        /*Investigate why the sign-in hasn't completed */
+        console.log(result);
+      }
+    } catch (error) {
+      // Handle login errors
+      console.error("Login error:", error);
+      setErrorMessage("Invalid email or password. Please try again.");
+    }
+  };
 
-    loginUser(userInfo);
+  const handleSignInWithGoogle = async () => {
+    try {
+      const result = await signIn.create({
+        strategy: 'oauth_google',
+        identifier: 'oauth_google'
+      });
+
+      if (result.status === "complete") {
+        await setActive({ session: result.createdSessionId });
+        navigate("/");
+      }
+      else {
+        /*Investigate why the sign-in hasn't completed */
+        console.log(result);
+      }
+    } catch (error) {
+      console.error("Google login error:", error);
+      setErrorMessage("Failed to login with Google. Please try again.");
+    }
+  };
+
+  const handleSignInWithDiscord = async () => {
+    try {
+      const result = await signIn.create({
+        strategy: 'oauth_discord',
+        redirectUrl: '/',
+        identifier: 'oauth_discord'
+      });
+
+      if (result.status === "complete") {
+        await setActive({ session: result.createdSessionId });
+        navigate("/");
+      }
+      else {
+        /*Investigate why the sign-in hasn't completed */
+        console.log(result);
+      }
+    } catch (error) {
+      console.error("Discord login error:", error);
+      setErrorMessage("Failed to login with Discord. Please try again.");
+    }
   };
 
   return (
@@ -36,11 +89,7 @@ const Login = () => {
       <Navbar />
       <div className="auth-login-container">
         <h1 className="auth-login-title">Login</h1>
-        <form
-          ref={loginForm}
-          onSubmit={handleSubmit}
-          className="auth-login-form"
-        >
+        <form onSubmit={handleSignInWithEmailAndPassword} className="auth-login-form">
           <div className="auth-input-field">
             <label htmlFor="email">Email Address:</label>
             <input
@@ -63,15 +112,20 @@ const Login = () => {
               required
             />
           </div>
-          {errorMessage && <p className="auth-error-message">{errorMessage}</p>}
+          {errorMessage && (
+            <p className="auth-error-message">{errorMessage}</p>
+          )}
           <button type="submit" className="auth-login-button">
             Login
           </button>
-          <p className="auth-forgot-password">
-            <a href="/forgotpassword">Forgot Password?</a>
-          </p>
+          <button onClick={handleSignInWithGoogle} className="auth-login-button auth-login-button-google">
+            Login with Google
+          </button>
+          <button onClick={handleSignInWithDiscord} className="auth-login-button auth-login-button-discord">
+            Login with Discord
+          </button>
           <p className="auth-register-link">
-            <a href="/register">Didn't have account? Register</a>
+            Don't have an account? <a href="/register">Register</a>
           </p>
         </form>
       </div>
