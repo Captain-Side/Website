@@ -16,10 +16,10 @@ const LiveEvents = () => {
   const visibleGamesSlice = gameData.games.slice(0, visibleGames);
 
   return (
-    <section className='py-3 container' style={{ backgroundColor: '' }}>
+    <section className='py-3 container'>
       <div className='d-flex justify-content-between align-items-center view-more-container'>
         <h1 className="title">
-          <span className="live">LIVE</span> <span className="events">EVENTS</span>
+          Popular Events
         </h1>
         <div>
           {visibleGames < gameData.games.length && (
@@ -27,7 +27,7 @@ const LiveEvents = () => {
               className='btn btn-dark-purple'
               onClick={() => loadMore()}
             >
-              View More
+              VIEW ALL
             </button>
           )}
           {visibleGames > 3 && (

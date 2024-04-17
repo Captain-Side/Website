@@ -1,9 +1,9 @@
 import { SignedIn, SignedOut, UserButton, useSession } from "@clerk/clerk-react";
 import { checkUserRole } from "../utils/clerkUser";
 import { useState, useEffect } from "react";
-import "./Navbar.css";
+import "./Buttons.css";
 
-export const Navbar = () => {
+const Buttons = () => {
   const { session } = useSession();
   const userRole = checkUserRole(session);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,3 +56,5 @@ export const Navbar = () => {
     </header>
   );
 };
+
+export default Buttons;

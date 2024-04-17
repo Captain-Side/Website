@@ -1,159 +1,121 @@
-/* Reset styles */
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Styles for the navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px; /* Adjusted padding */
-  background-color: #333;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  position: relative;
-}
-
-/* Styles for the left side */
-.left-side {
-  display: flex;
-  align-items: center;
-}
-
-/* Styles for the logo */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 40px;
-  margin-right: 10px;
-}
-
-.logo-text {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: white !important; /* Change text color to white */
-  margin: 0; /* Reset all margins */
-  padding-top: 5px; /* Adjusted padding to vertically align with the logo image */
-}
-
-/* Styles for the search icon */
-.search-icon {
-  font-size: 24px;
-  margin-left: 10px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-/* Styles for the right side */
-.right-side {
-  display: flex;
-  align-items: center;
-}
-
-/* Styles for the menu items */
-.menu-items {
-  z-index: 10;
-  list-style-type: none;
-  padding-top: 10px;
-  margin: 0;
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  align-items: center;
-}
-
-.menu-items.active {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-items li {
-  margin-bottom: 5px; /* Adjusted margin between list items */
-  color: #333;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.menu-items li:hover {
-  background-color: #800080;
-  border-radius: 5px;
-}
-
-.menu-items li button {
-  background-color: #800080;
-  color: #fff; /* Added color */
-}
-
-/* Styles for the menu icon */
-.menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Styles for the login button */
-.navbar-login {
- 
-  margin-right: 20px; /* Increase margin on the left side */
-}
-
-.navbar-login-button {
-  background-color: #800080;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Hover styles for login button */
-.navbar-login-button:hover {
-  background-color: #700370;
-}
-
-/* For desktop mode */
-@media (min-width: 769px) {
-  .menu-icon {
-    display: none;
-  }
-
-  .menu-items {
-    display: flex;
-    justify-content: center;
-    position: static;
-    background-color: transparent;
-    box-shadow: none;
-  }
-
-  .menu-items li {
-    margin-bottom: 5px;
-    cursor: pointer;
-    color: #fff;
-  }
-  
-  .navbar-login{
-    margin-right: 0%;
-    margin-left: 10px;
-  }
-}
-
-a:hover {
-  color: #fff;
   text-decoration: none;
 }
+
+header{
+  display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 10px; /* Adjusted padding */
+color: #fff;
+font-family: 'Roboto', sans-serif;
+position: relative;
+z-index: 99;
+background-image: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #000000 150%);
+  }
+
+
+
+.logo{
+display: flex;
+align-items: center;
+}
+.logo i{
+font-size: 28px;
+margin-right: 3px;
+}
+
+
+.navbar{
+background: #11021900;
+box-shadow: none;
+}
+.navbar a{
+font-size: 1.1rem;
+font-weight: 500;
+margin: 0px 30px;
+transition: all .50s ease;
+padding: 8px 8px;
+border-radius: 99px;
+}
+
+.navbar a:hover{
+  background: rgba(231, 211, 237, 0.2);
+color: #fff;
+}
+
+.navbar a.active{
+  background: rgba(231, 211, 237, 0.2);
+}
+
+.main{
+  display: flex;
+  align-items: center;
+}
+  .main a{
+  margin-right: 25px;
+  margin-left: 10px;
+  color: var( -- text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all .50s ease;
+  }
+
+  #menu-icon{
+      font-size: 35px;
+      cursor: pointer;
+      z-index: 10001;
+      display: none;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+  @media (max-width: 1280px){
+      header{
+          padding: 14px 2%;
+          transition: .2s;
+      }
+      .navbar a{
+          padding: 5px 0;
+          margin: 0px 20px;
+      }
+  }
+
+  @media (max-width: 1190px){
+      #menu-icon{
+      display: block;
+      }
+      .navbar{
+      position: absolute;
+      top: 120%;
+      right: -100%;
+      width: 270px;
+      height: 29vh;
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-radius: 10px;
+      transition: all 0.50s ease;
+      background: #110219;
+      }
+
+      .navbar a{
+          display: block;
+          margin: 12px 0;
+          padding: 0px 25px;
+          transition: all .50s ease;
+      }
+          .navbar a:hover{
+          transform: translateY(5p);
+          }
+          .navbar a.active{
+          color: #fff;
+          }
+          .navbar.open{
+              right: 2%;
+              display: flex;
+          }
+  }

@@ -1,11 +1,13 @@
 .container {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .py-3 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background: linear-gradient(95.86deg, #110219 99.65%, #14021D -25.66%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .title {
@@ -28,11 +30,9 @@
 }
 
 .btn-dark-purple {
-  background-color: darkpurple;
+  
   color: white;
-  border: 2px solid gold;
   transition-duration: 0.4s;
-  border-radius: 500px;
 }
 
 .btn-dark-purple:hover {
@@ -157,12 +157,8 @@
 }
 
 .btn-dark-purple {
-  background-color: black;
   color: rgb(241, 231, 241);
-  border: 2px solid gold;
   transition-duration: 0.4s;
-  border-radius: 500px;
-  
 }
 
 .btn-dark-purple:hover {

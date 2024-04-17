@@ -1,5 +1,4 @@
 import React from "react";
-import { Navbar } from "../components/Navbar.jsx";
 import Latest from "../components/Latest";
 import { LiveEvents } from "../components/LiveEvents.jsx";
 import { GamePass } from "../components/GamePass.tsx";
@@ -9,13 +8,14 @@ import { AboutUs } from "../components/AboutUs.tsx";
 import { Footer } from "../components/Footer.tsx";
 import { Roster } from "../components/Roster.tsx";
 import { Service } from "../components/Service.tsx";
+import Buttons from "../components/Buttons.jsx";
+import {Navbar} from "../components/Navbar.jsx";
 
 const HomePage = () => {
   return (
     <div>
-      <Navbar />
+      <Buttons />
       <Latest id="latest" />
-      <LiveEvents id="live-events" />
       <GameTest id="game-test" />
       <GamePass id="game-pass" />
       <GameTesting id="game-testing" />

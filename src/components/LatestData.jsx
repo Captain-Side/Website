@@ -8,11 +8,11 @@ import img5 from "../assets/latest/vaaloo.png";
 const LatestData = {
 
     items : [
-        { src: img1, link: "https://example.com/1" },
-        { src: img2, link: "https://example.com/2" },
-        { src: img3, link: "https://example.com/3" },
-        { src: img4, link: "https://example.com/4" },
-        { src: img5, link: "https://example.com/5" },
+        { src: img1, link: "https://example.com/1", name: "item active" },
+        { src: img2, link: "https://example.com/2", name: "item" },
+        { src: img3, link: "https://example.com/3", name: "item" },
+        { src: img4, link: "https://example.com/4", name: "item" },
+        { src: img5, link: "https://example.com/5", name: "item" },
       ]
     
 }

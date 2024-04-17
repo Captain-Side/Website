@@ -1,33 +1,69 @@
-// Latest.jsx
-import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useState, useEffect } from 'react';
 import LatestData from "./LatestData.jsx";
 import './Latest.css'; // Import your CSS file for styling
 
 const Latest = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000, // Auto-advance every 3 seconds
-    arrows: false, // Hide next/prev arrows
-    pauseOnHover: false,
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const refreshInterval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+
+    return () => {
+      clearInterval(refreshInterval);
+    };
+  }, []);
+
+  const nextSlide = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % LatestData.items.length);
+  };
+
+  const updateIndex = (newIndex) => {
+    if (newIndex < 0) {
+      newIndex = 0;
+    } else if (newIndex >= LatestData.items.length) {
+      newIndex = LatestData.items.length - 1;
+    }
+
+    setActiveIndex(newIndex);
   };
 
   return (
-    <div className="slider-container">
-      <Slider {...settings}>
+    <div className="slider">
+      <div className='list'>
         {LatestData.items.map((item, index) => (
-          <div key={index}>
+          <div className={`item ${index === activeIndex ? 'active' : ''}`} key={index}>
             <img src={item.src} alt="" className="full-width-image" />
           </div>
         ))}
-      </Slider>
+      </div>
+      <div className="carousel-buttons">
+        
+        <div className="indicators">
+          {LatestData.items.map((item, index) => {
+            return (
+              // <button
+              //   key={index}
+              //   className="indicator-buttons"
+              //   onClick={() => {
+              //     updateIndex(index);
+              //   }}
+              // >
+              //   <span
+              //     className={` ${
+              //       index === activeIndex
+              //         ? "indicator-symbol-active"
+              //         : "indicator-symbol"
+              //     }`}
+              //   >
+                  <ul><li className={index===activeIndex? "active":null}></li></ul>
+              //   </span>
+              // </button>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
