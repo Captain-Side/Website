@@ -3,7 +3,7 @@ import AdminMenu from "./AdminMenu";
 import { useSession } from "@clerk/clerk-react";
 import { checkUserRole } from "../../utils/clerkUser";
 import NotFoundPage from "../NotFoundPage";
-import Buttons from "../../components/Buttons";
+import Navbar from "../../components/Navbar";
 
 const AdminDashboard = () => {
   const { session, isLoading } = useSession();
@@ -26,7 +26,7 @@ const AdminDashboard = () => {
 
   return (
     <>
-      <Buttons />
+      <Navbar />
       <AdminMenu />
     </>
   );

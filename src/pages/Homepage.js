@@ -8,13 +8,12 @@ import { AboutUs } from "../components/AboutUs.tsx";
 import { Footer } from "../components/Footer.tsx";
 import { Roster } from "../components/Roster.tsx";
 import { Service } from "../components/Service.tsx";
-import Buttons from "../components/Buttons.jsx";
-import {Navbar} from "../components/Navbar.jsx";
+import Navbar from "../components/Navbar.jsx";
 
 const HomePage = () => {
   return (
     <div>
-      <Buttons />
+      <Navbar />
       <Latest id="latest" />
       <GameTest id="game-test" />
       <GamePass id="game-pass" />

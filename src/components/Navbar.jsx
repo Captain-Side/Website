@@ -3,7 +3,7 @@ import { checkUserRole } from "../utils/clerkUser";
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 
-export const Navbar = () => {
+const Navbar = () => {
   const { session } = useSession();
   const userRole = checkUserRole(session);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ export const Navbar = () => {
       <a href="/" className="logo"><img src="/assets/CS_logo-1.png" alt="CS Logo" /></a>
       
       <ul className={`navbar ${isMenuOpen ? 'open' : ''}`}>
-        <li><a href="/" className="active">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#about-us">About Us</a></li>
         <li><a href="#live-events">Events</a></li>
         <li><a href="#game-testing">Testing</a></li>
@@ -41,11 +41,11 @@ export const Navbar = () => {
         <li><a href="/contact">Contact Us</a></li>
         {renderAdminDashboardLink()}
       </ul>
-      
-      <ul>
+      <div className="main">
+      <ul className="login">
         <li>
           <SignedOut>
-            <a href="/login" className='login'> Login</a>
+            <a href="/login">Login</a>
           </SignedOut>
           <SignedIn>
             <UserButton afterSignOutUrl='/'/>
@@ -53,6 +53,9 @@ export const Navbar = () => {
         </li>
       </ul>
       <div className={`bx bx-menu ${isMenuOpen ? 'bx-x' : ''}`} id="menu-icon"></div>
+      </div>
     </header>
   );
 };
+
+export default Navbar;

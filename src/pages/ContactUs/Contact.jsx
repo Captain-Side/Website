@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './contact.css'; // Import CSS file for styling
 import ContactForm from './ContactForm';
-import Navbar from '../../components/Buttons';
+import Navbar from '../../components/Navbar';
 
 const Contact = () => {
   const [selectedOption, setSelectedOption] = useState(null);

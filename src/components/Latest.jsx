@@ -43,23 +43,7 @@ const Latest = () => {
         <div className="indicators">
           {LatestData.items.map((item, index) => {
             return (
-              // <button
-              //   key={index}
-              //   className="indicator-buttons"
-              //   onClick={() => {
-              //     updateIndex(index);
-              //   }}
-              // >
-              //   <span
-              //     className={` ${
-              //       index === activeIndex
-              //         ? "indicator-symbol-active"
-              //         : "indicator-symbol"
-              //     }`}
-              //   >
                   <ul><li className={index===activeIndex? "active":null}></li></ul>
-              //   </span>
-              // </button>
             );
           })}
         </div>
