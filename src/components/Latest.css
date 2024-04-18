@@ -41,7 +41,7 @@
   left: 60px;
 }
 
-.indicators{
+.indicators {
   position: absolute;
   color: #D9D9D9;
   width: 100%;
@@ -52,7 +52,7 @@
   justify-content: center;
 }
 
-.indicators li{
+.indicators li {
   list-style: none;
   width: 10px;
   height: 10px;
@@ -61,7 +61,7 @@
   transition: 1s;
 }
 
-.indicators li.active{
+.indicators li.active {
   width: 30px;
   background-color: #4c0352;
 }
@@ -78,7 +78,7 @@
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   .slider {
     height: 45vh;
   }

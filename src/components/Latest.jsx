@@ -39,13 +39,10 @@ const Latest = () => {
         ))}
       </div>
       <div className="carousel-buttons">
-        
         <div className="indicators">
-          {LatestData.items.map((item, index) => {
-            return (
-                  <ul><li className={index===activeIndex? "active":null}></li></ul>
-            );
-          })}
+          {LatestData.items.map((item, index) => (
+            <ul key={index}><li className={index === activeIndex ? "active" : null}></li></ul>
+          ))}
         </div>
       </div>
     </div>

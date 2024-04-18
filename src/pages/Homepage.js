@@ -1,5 +1,5 @@
 import React from "react";
-import Latest from "../components/Latest";
+import Latest from "../components/Latest.jsx";
 import { LiveEvents } from "../components/LiveEvents.jsx";
 import { GamePass } from "../components/GamePass.tsx";
 import GameTesting from "../components/GameTesting.tsx";

@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from "react";
 import { SignedIn, SignedOut, UserButton, useSession } from "@clerk/clerk-react";
 import { checkUserRole } from "../utils/clerkUser";
-import { useState, useEffect } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
     const menu = document.querySelector('#menu-icon');
   
     const toggleMenu = () => {
-      setIsMenuOpen((prev) => !prev);
+      setIsMenuOpen(prev => !prev);
     };
 
     menu.addEventListener('click', toggleMenu);
@@ -30,7 +30,9 @@ const Navbar = () => {
 
   return (
     <header>
-      <a href="/" className="logo"><img src="/assets/CS_logo-1.png" alt="CS Logo" /></a>
+      <a href="/" className="logo">
+        <img src="/assets/CS_logo-1.png" alt="CS Logo" />
+      </a>
       
       <ul className={`navbar ${isMenuOpen ? 'open' : ''}`}>
         <li><a href="/">Home</a></li>
@@ -41,18 +43,20 @@ const Navbar = () => {
         <li><a href="/contact">Contact Us</a></li>
         {renderAdminDashboardLink()}
       </ul>
+
       <div className="main">
-      <ul className="login">
-        <li>
-          <SignedOut>
-            <a href="/login">Login</a>
-          </SignedOut>
-          <SignedIn>
-            <UserButton afterSignOutUrl='/'/>
-          </SignedIn>
-        </li>
-      </ul>
-      <div className={`bx bx-menu ${isMenuOpen ? 'bx-x' : ''}`} id="menu-icon"></div>
+        <ul className="login">
+          <li>
+            <SignedOut>
+              <a href="/login">Login</a>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl='/' />
+            </SignedIn>
+          </li>
+        </ul>
+
+        <div className={`bx bx-menu ${isMenuOpen ? 'bx-x' : ''}`} id="menu-icon"></div>
       </div>
     </header>
   );
