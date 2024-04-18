@@ -1,8 +1,8 @@
-import img1 from "../assets/latest/Anthem.jpg";
-import img2 from "../assets/latest/Bgmi.jpg";
-import img3 from "../assets/latest/Cyberpunk.jpg";
-import img4 from "../assets/latest/Valo.jpg";
-import img5 from "../assets/latest/vaaloo.png";
+import img1 from "../assets/latest/Anthem.webp";
+import img2 from "../assets/latest/Bgmi.webp";
+import img3 from "../assets/latest/Cyberpunk.webp";
+import img4 from "../assets/latest/Valo.webp";
+import img5 from "../assets/latest/vaaloo.webp";
 
 
 const LatestData = {

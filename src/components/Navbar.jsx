@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <header>
       <a href="/" className="logo">
-        <img src="/assets/CS_logo-1.png" alt="CS Logo" />
+        <img src="/assets/CS_logo-1.webp" alt="CS Logo" />
       </a>
       
       <ul className={`navbar ${isMenuOpen ? 'open' : ''}`}>

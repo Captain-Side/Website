@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -71,7 +72,7 @@ header {
 }
 
 .login {
-    background-image: url("../assets/img/Vector_3.png");
+    background-image: url("../assets/img/Vector_3.webp");
     background-size: cover;
     display: flex;
     width: 70px;
