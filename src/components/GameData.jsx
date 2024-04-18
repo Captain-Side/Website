@@ -1,6 +1,6 @@
-import img1 from '../assets/img/image1.jpg';
-import img2 from '../assets/img/image2.png';
-import img3 from '../assets/img/image3.jpg';
+import img1 from '../assets/img/image1.webp';
+import img2 from '../assets/img/image2.webp';
+import img3 from '../assets/img/image3.webp';
 
 
 const gameData = {

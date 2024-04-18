@@ -1,63 +1,65 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import './Navbar.css';
-import { FaSearch, FaBars } from 'react-icons/fa';
-import {SignedIn, SignedOut, UserButton, useSession } from '@clerk/clerk-react';
-import { checkUserRole } from '../utils/clerkUser';
+import React, { useState, useEffect } from "react";
+import { SignedIn, SignedOut, UserButton, useSession } from "@clerk/clerk-react";
+import { checkUserRole } from "../utils/clerkUser";
+import "./Navbar.css";
 
-export const Navbar = () => {
-
+const Navbar = () => {
   const { session } = useSession();
   const userRole = checkUserRole(session);
-  console.log("UserRol: ", userRole);
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const links = [
-    { title: 'Dashboard', url: '/admin/dashboard', role: 'admin'},
-    // Add more placeholder links as needed
-  ];
+  useEffect(() => {
+    const menu = document.querySelector('#menu-icon');
+  
+    const toggleMenu = () => {
+      setIsMenuOpen(prev => !prev);
+    };
 
-  const toggleMenu = () => {
+    menu.addEventListener('click', toggleMenu);
 
-    setIsMenuOpen(!isMenuOpen);
+    return () => {
+      menu.removeEventListener('click', toggleMenu);
+    };
+  }, []);
 
+  const renderAdminDashboardLink = () => {
+    return userRole === 'org:admin' && (
+      <li><a href="/admin/dashboard">Dashboard</a></li>
+    );
   };
 
   return (
-    <div className="navbar">
-      <div className="left-side">
-        <Link to="/">
-          <div className="logo">
-            <img src="/assets/CS_logo-1.png" alt="CS Logo" />
-            <p className="logo-text">Captain side</p>
-          </div>
-        </Link>
-        <FaSearch className="search-icon" />
-      </div>
-      <div className="right-side">
-        <ul className={`menu-items ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="#live-events">Events</a></li>
-          <li><a href="#game-testing">Testing</a></li>
-          <li><a href="#game-pass">Game Pass</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-          <SignedIn>
-    {(userRole === 'org:admin')  ? (
-      <li><a href="/admin/dashboard">Dashboard</a>
-      </li>
-    ) : null}</SignedIn>
+    <header>
+      <a href="/" className="logo">
+        <img src="/assets/CS_logo-1.webp" alt="CS Logo" />
+      </a>
+      
+      <ul className={`navbar ${isMenuOpen ? 'open' : ''}`}>
+        <li><a href="/">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#live-events">Events</a></li>
+        <li><a href="#game-testing">Testing</a></li>
+        <li><a href="#game-pass">Game Pass</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        {renderAdminDashboardLink()}
+      </ul>
+
+      <div className="main">
+        <ul className="login">
           <li>
-          <SignedOut>
-            <a href="/login"> Login</a>
-          </SignedOut>
-          <SignedIn>
-            <UserButton afterSignOutUrl='/'/>
-          </SignedIn>
+            <SignedOut>
+              <a href="/login">Login</a>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl='/' />
+            </SignedIn>
           </li>
         </ul>
-        <FaBars className="menu-icon" onClick={toggleMenu} />
+
+        <div className={`bx bx-menu ${isMenuOpen ? 'bx-x' : ''}`} id="menu-icon"></div>
       </div>
-    </div>
+    </header>
   );
 };
+
+export default Navbar;
