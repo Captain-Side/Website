@@ -19,9 +19,9 @@ const HomePage = () => {
       <GamePass id="game-pass" />
       <GameTesting id="game-testing" />
       <AboutUs id="about-us" />
-      <Footer />
       <Roster id="roster" />
       <Service id="service" />
+      <Footer />
     </div>
   );
 };

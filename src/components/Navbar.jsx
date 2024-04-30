@@ -33,14 +33,10 @@ const Navbar = () => {
       <a href="/" className="logo">
         <img src="/assets/CS_logo-1.webp" alt="CS Logo" />
       </a>
-      
       <ul className={`navbar ${isMenuOpen ? 'open' : ''}`}>
-        <li><a href="/">Home</a></li>
-        <li><a href="#about-us">About Us</a></li>
         <li><a href="#live-events">Events</a></li>
-        <li><a href="#game-testing">Testing</a></li>
         <li><a href="#game-pass">Game Pass</a></li>
-        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/contact">Collab</a></li>
         {renderAdminDashboardLink()}
       </ul>
 

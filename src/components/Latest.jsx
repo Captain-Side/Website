@@ -38,6 +38,10 @@ const Latest = () => {
           </div>
         ))}
       </div>
+      <div className='arrows'>
+        <button id='prev'>{'<'}</button>
+        <button id='next'>{'>'}</button>
+      </div>
       <div className="carousel-buttons">
         <div className="indicators">
           {LatestData.items.map((item, index) => (

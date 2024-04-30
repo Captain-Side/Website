@@ -1,6 +1,6 @@
-import img1 from '../assets/img/image1.webp';
-import img2 from '../assets/img/image2.webp';
-import img3 from '../assets/img/image3.webp';
+import img1 from '../assets/img/Weekly_Wars_valorant.webp';
+import img2 from '../assets/img/Rectangle15.svg'
+
 
 
 const gameData = {
@@ -17,25 +17,10 @@ const gameData = {
     },
     {
         id:3,
-        img: img3,
-        
-    },
-    {
-        id:4,
         img: img1,
-       
-    },
-    {
-        id:5,
-        img: img2,
-       
-    },
-    {
-        id:6,
-        img: img3,
         
     },
-   
+    
 ]
 };
 
