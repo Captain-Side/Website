@@ -9,6 +9,7 @@ import { Footer } from "../components/Footer.tsx";
 import { Roster } from "../components/Roster.tsx";
 import { Service } from "../components/Service.tsx";
 import Navbar from "../components/Navbar.jsx";
+import Last from "../components/Last.jsx";
 
 const HomePage = () => {
   return (
@@ -16,11 +17,6 @@ const HomePage = () => {
       <Navbar />
       <Latest id="latest" />
       <GameTest id="game-test" />
-      <GamePass id="game-pass" />
-      <GameTesting id="game-testing" />
-      <AboutUs id="about-us" />
-      <Roster id="roster" />
-      <Service id="service" />
       <Footer />
     </div>
   );

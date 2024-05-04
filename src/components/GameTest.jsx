@@ -17,7 +17,7 @@ const LiveEvents = () => {
   const visibleGamesSlice = gameData.games.slice(0, visibleGames);
 
   return (
-    <section className='py-3 container'>
+    <section className='py-3 contain'>
       <div className='d-flex justify-content-between align-items-center view-more-container'>
         <h1 className="title">
           Popular Events

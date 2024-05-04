@@ -1,7 +1,8 @@
-.container {
+.contain {
   max-width: 100%;
   margin: 0 auto;
   font-family: 'Proxima-Nova';
+  overflow: hidden;
 }
 
 .py-3 {
@@ -44,6 +45,10 @@
 .card-img-top {
   max-width: 100%;
   height: auto;
+}
+
+.row{
+  overflow-x: auto;
 }
 
 .card-body {

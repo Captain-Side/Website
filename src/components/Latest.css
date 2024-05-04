@@ -55,6 +55,7 @@
   color: #fff;
   font-size: x-large;
   transition: .5s;
+  outline: none;
 }
 
 .arrows button:hover {

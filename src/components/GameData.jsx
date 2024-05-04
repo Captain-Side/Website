@@ -20,6 +20,16 @@ const gameData = {
         img: img1,
         
     },
+    {
+        id:4,
+        img: img1,
+        
+    },
+    {
+        id:5,
+        img: img1,
+        
+    },
     
 ]
 };
