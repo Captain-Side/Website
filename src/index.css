@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("../src/assets/fonts/proxima-nova/Mark\ Simonson\ \ Proxima\ Nova\ Semibold.otf");
+}
+
+@font-face {
+  font-family: "Tungsten-Bold";
+  src: url("../src/assets/fonts/Tungsten-Font-1/Tungsten\ Font/Tungsten-Bold/Tungsten-Bold.ttf");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

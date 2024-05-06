@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import gameData from './GameData';
 import './gameTest.css';
+import joinimg from '../assets/img/Join.webp';
 
 const LiveEvents = () => {
   const [visibleGames, setVisibleGames] = useState(3);
@@ -16,7 +17,7 @@ const LiveEvents = () => {
   const visibleGamesSlice = gameData.games.slice(0, visibleGames);
 
   return (
-    <section className='py-3 container'>
+    <section className='py-3 contain'>
       <div className='d-flex justify-content-between align-items-center view-more-container'>
         <h1 className="title">
           Popular Events
@@ -43,19 +44,14 @@ const LiveEvents = () => {
 
       <div className='row'>
         {visibleGamesSlice.map(item => (
-          <div key={item.id} className='card-view col-md-6 col-lg-4 mb-4'>
-            <div className='card p-0 overflow-hidden h-100 shadow'>
+          <div key={item.id} className='card-view col-md-6 col-lg-3 mb-4'>
+            <div className='card p-0 overflow-hidden shadow'>
               <img src={item.img} alt={`Game ${item.id}`} className='card-img-top' />
-              <div className='card-body'>
-                <h5 className='card-title'>{item.title}</h5>
-                <p className='desc-text'>{item.desc}</p>
-                <div className='button-container'>
-                  <a href={item.link} className='action-button action-button-play' target='_blank' rel='noopener noreferrer'>
-                    Battle
-                  </a>
-                  <button className='action-button action-button-info'>Watch Now</button>
-                </div>
-              </div>
+            </div>
+            <div className='join'>
+              <a href="">
+              <img src={joinimg} alt="" />
+              </a>
             </div>
           </div>
         ))}

@@ -6,27 +6,21 @@ const Latest = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const refreshInterval = setInterval(() => {
-      nextSlide();
-    }, 3000);
+    const refreshInterval = setInterval(nextSlide, 5000);
 
-    return () => {
-      clearInterval(refreshInterval);
-    };
+    return () => clearInterval(refreshInterval);
   }, []);
 
   const nextSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % LatestData.items.length);
+    setActiveIndex(prevIndex => (prevIndex + 1) % LatestData.items.length);
   };
 
-  const updateIndex = (newIndex) => {
-    if (newIndex < 0) {
-      newIndex = 0;
-    } else if (newIndex >= LatestData.items.length) {
-      newIndex = LatestData.items.length - 1;
-    }
+  const prevSlide = () => {
+    setActiveIndex(prevIndex => (prevIndex - 1 + LatestData.items.length) % LatestData.items.length);
+  };
 
-    setActiveIndex(newIndex);
+  const updateIndex = newIndex => {
+    setActiveIndex(Math.max(0, Math.min(newIndex, LatestData.items.length - 1)));
   };
 
   return (
@@ -37,6 +31,10 @@ const Latest = () => {
             <img src={item.src} alt="" className="full-width-image" />
           </div>
         ))}
+      </div>
+      <div className='arrows'>
+        <button id='prev' onClick={prevSlide}>{'<'}</button>
+        <button id='next' onClick={nextSlide}>{'>'}</button>
       </div>
       <div className="carousel-buttons">
         <div className="indicators">
