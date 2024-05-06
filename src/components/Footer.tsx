@@ -7,7 +7,7 @@ export const Footer = () => {
    
     <div className='container'>
       <div className='about'>
-        <img src={longLogo} alt="" />
+        <img src={longLogo} alt="CaptainSide" />
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
         nibh euismod tincidunt ut laoreet dolore magna amet, consectetue .</p>
         <div className="copyright-2024">
@@ -45,9 +45,9 @@ export const Footer = () => {
             <div className="icon-wrapper">
               <a href='mailto:hello@captainside.com' className="icon"><div className='bx bx-envelope'></div> Email</a>
             </div>
-            <div className="privacy-popolicy">{`Privacy Policy `}</div>
+            <div className="privacy-popolicy">Privacy Policy</div>
             <div className="terms-condconditions-wrapper">
-              <div className="terms-condconditions">{`Terms & Conditions `}</div>
+              <div className="terms-condconditions">Terms & Conditions</div>
             </div>
           </div>
         </div>

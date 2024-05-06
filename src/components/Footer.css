@@ -66,16 +66,7 @@
   .log-in {
     white-space: nowrap;
   }
-  .h,
-  .log-in {
-    text-transform: capitalize;
-  }
-  .elp {
-    text-transform: lowercase;
-  }
-  .support {
-    text-transform: capitalize;
-  }
+  
   .help-support-container {
     align-self: stretch;
     position: relative;
@@ -155,52 +146,8 @@
     min-width: 285px;
     gap: var(--gap-xl);
   }
-  .instagram-icon {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-  }
-  .icbaseline-discord-icon,
-  .icoutline-email-icon,
-  .mdiinstagram-icon,
-  .mdiyoutube-icon {
-    position: absolute;
-    top: 70px;
-    left: 399px;
-    width: 28px;
-    height: 28px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  .icoutline-email-icon,
-  .mdiinstagram-icon,
-  .mdiyoutube-icon {
-    top: 167px;
-  }
-  .icoutline-email-icon,
-  .mdiyoutube-icon {
-    top: 264px;
-  }
-  .icoutline-email-icon {
-    top: 361px;
-  }
-  .instagram-icon-parent {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    margin: 0 !important;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
+  
+  
   .about-us-parent,
   .subscribe {
     display: flex;

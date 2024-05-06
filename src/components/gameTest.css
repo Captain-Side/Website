@@ -47,10 +47,6 @@
   height: auto;
 }
 
-.row{
-  overflow-x: auto;
-}
-
 .card-body {
   background-color: black;
   color: white;
@@ -177,6 +173,10 @@
   padding: 0px;
 }
 
+.row{
+  display: flexbox;
+}
+
 /* .card:hover {
   transform: scale(1.05);
 } */
@@ -216,6 +216,17 @@
     margin-bottom: 20px; /* Adjust the margin value as needed */
   }
   
+
+  @media screen and (max-width: 1000px) {
+    .card-view{
+      width: 200px;
+    }
+
+    .join img{
+      width: 70px;
+    }
+  }
+
 @media screen and (max-width: 500px) {
   .title{
     font-size: 1.2rem;

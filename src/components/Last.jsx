@@ -7,10 +7,10 @@ const Last = () => {
       <h1 className="subscribe-for-more">subscribe for more updates</h1>
       <div className="last-inner">
         <div className="email-input-parent">
-          <div className="email-input">
-            <div className="enter-email-adress">Enter Email Adress</div>
+          <form>
+          <input type="email" placeholder="Enter Email Adress" required/>
             <div className="email-input-child" />
-          </div>
+          </form>
           <div className="frame-wrapper">
             <button className="vector-parent">
               <img className="frame-child" alt="" src={send_img} />
