@@ -6,7 +6,7 @@ import {PassCard} from '../components/cards/PassCard.tsx'
 export const GamePass = () => {
   return (
     <div id='game-pass'>
-    <h3 className='h3c'><span className='game'>GAME</span> <span className='pass'>PASS</span> </h3>
+    <h3 className='h3c'>GamePass</h3>
     <div className='gamepass'>
     
     <PassCard img-1="/assets/NFT-Card_01000.png"/>

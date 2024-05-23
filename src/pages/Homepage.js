@@ -19,9 +19,6 @@ const HomePage = () => {
       <GameTest id="game-test" />
       <GamePass id="game-pass" />
       <GameTesting id="game-testing" />
-      <AboutUs id="about-us" />
-      <Roster id="roster" />
-      <Service id="service" />
       <Last />
       <Footer />
     </div>

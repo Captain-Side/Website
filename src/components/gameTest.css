@@ -83,7 +83,6 @@
 
 .card {
   width: 100%;
-   
 }
 
 .card-body {
@@ -171,6 +170,7 @@
 }
 .card-view{
   padding: 0px;
+  background-color: black;
 }
 
 .row{
