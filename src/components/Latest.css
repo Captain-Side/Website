@@ -48,8 +48,9 @@
   background-color: #79767667;
   border: none;
   font-family: monospace;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height
+  : 40px;
   border-radius: 15px;
   margin: 5px;
   color: #fff;
@@ -102,6 +103,13 @@
   .slider {
     height: 60vh;
   }
+  
+}
+
+@media (max-width: 800px) {
+  .slider .list .item::before{
+    background-image: linear-gradient(to bottom , rgba(14, 2, 21, 0) 10%, #110219 80.15%)
+  }
 }
 
 @media (max-width: 750px) {
@@ -119,6 +127,9 @@
 @media (max-width: 600px) {
   .slider {
     height: 35vh;
+  }
+  .slider .list .item::before{
+    background-image: linear-gradient(to bottom , rgba(14, 2, 21, 0) 30%, #110219 100.15%)
   }
 }
 

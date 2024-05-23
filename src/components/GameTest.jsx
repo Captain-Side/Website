@@ -42,7 +42,8 @@ const LiveEvents = () => {
         </div>
       </div>
 
-      <div className='row'>
+      <div className='scroll-container'>
+      <div className='image-container'>
         {visibleGamesSlice.map(item => (
           <div key={item.id} className='card-view col-md-6 col-lg-3 mb-4'>
             <div className='card p-0 overflow-hidden shadow'>
@@ -55,6 +56,7 @@ const LiveEvents = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
