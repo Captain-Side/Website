@@ -18,7 +18,7 @@ function Maintenance() {
                 className="text-lg font-medium hover:underline" 
               >
                 Join Now
-                <HiArrowRight className="ml-2" />
+                <HiArrowRight className="ml-2 mt-1" />
               </Button>
             </span>
           </p>
