@@ -10,10 +10,12 @@ import { Roster } from "../components/Roster.tsx";
 import { Service } from "../components/Service.tsx";
 import Navbar from "../components/Navbar.jsx";
 import Last from "../components/Last.jsx";
+import Maintenance from "../components/Maintenance.jsx";
 
 const HomePage = () => {
   return (
     <div>
+      <Maintenance />
       <Navbar />
       <Latest id="latest" />
       <GameTest id="game-test" />
